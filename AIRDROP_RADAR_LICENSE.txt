@@ -1,0 +1,128 @@
+AIRDROP RADAR PROPRIETARY SOURCE-VISIBLE LICENSE
+Version 1.0 — October 2026
+
+Copyright (c) 2026 Digital Drago. All Rights Reserved.
+
+IMPORTANT: This software is proprietary and is NOT open source.
+
+1. OWNERSHIP
+
+The software, source code, documentation, user interface, architecture, workflows,
+scoring concepts, data models, decision logic, test systems, logs, reports, and all
+other associated materials comprising or relating to "Airdrop Radar" (collectively,
+the "Software") are owned by the copyright holder and are protected by applicable
+copyright, trade secret, and other intellectual-property laws.
+
+Except for the limited permission expressly stated below, no rights are granted to
+any person or entity.
+
+2. LIMITED SOURCE-VIEWING PERMISSION
+
+If the source code is made publicly visible, you may view the source code solely for
+personal review, security inspection, technical evaluation, or consideration of a
+commercial license or partnership.
+
+Public visibility of the source code does NOT grant permission to use, copy, modify,
+compile, execute, deploy, host, self-host, fork, redistribute, publish, sublicense,
+commercialize, sell, rent, provide as a service, create derivative works from, or
+otherwise exploit the Software.
+
+3. NO FREE PRODUCTION OR COMMERCIAL USE
+
+Without prior written authorization from the copyright holder, you may NOT use the
+Software, in whole or in part, for:
+
+- production use;
+- commercial or revenue-generating activity;
+- internal business operations;
+- investment, trading, airdrop, token-launch, market-intelligence, research, or
+  monitoring services operated for yourself or another person or organization;
+- hosted services, SaaS, APIs, dashboards, bots, agents, data feeds, or reports;
+- client work, consulting, managed services, or paid research;
+- incorporation into another product, repository, application, model, agent,
+  dataset, workflow, or service;
+- deployment on a server, cloud platform, public website, private business system,
+  or blockchain-related production environment;
+- resale, sublicensing, white-labeling, redistribution, or commercial integration.
+
+A separate written license is required for any such use.
+
+4. NO COPYING, FORKING, OR DERIVATIVE WORKS
+
+Unless separately authorized in writing, you may not copy substantial portions of
+the Software, create or distribute forks, translate the Software into another
+programming language, adapt its architecture or proprietary implementation for a
+competing product, remove or alter proprietary notices, or create derivative works
+based on the Software.
+
+Normal temporary copies automatically created by a web browser solely to display a
+public repository are not considered authorized reuse of the Software.
+
+5. OFFICIAL DEMOS
+
+You may interact with an official demo instance made available by the copyright
+holder, subject to any rules displayed with that demo. Access to an official demo
+does not grant source-code, deployment, reproduction, or commercial-use rights.
+
+6. COMMERCIAL, PRODUCTION, AND PARTNER LICENSES
+
+Commercial, production, hosted, integration, research, partnership, or other usage
+rights may be offered under a separate written agreement. The scope, duration,
+fees, permitted environments, support, redistribution rights, and other terms will
+be defined by that agreement.
+
+7. THIRD-PARTY SERVICES AND MATERIALS
+
+The Software may interoperate with third-party APIs, data providers, blockchains,
+libraries, websites, or services. Those third-party materials remain subject to
+their own licenses, terms, rate limits, and policies. This license grants no rights
+to third-party materials.
+
+8. DATA AND API RESPONSIBILITY
+
+You are responsible for obtaining and complying with all licenses, permissions,
+API credentials, service terms, privacy obligations, and legal requirements that
+apply to data or services you connect to the Software.
+
+9. NO WARRANTY
+
+THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, ACCURACY, RELIABILITY, NON-INFRINGEMENT, OR
+AVAILABILITY.
+
+The Software may contain errors, incomplete information, false positives, false
+negatives, delayed data, third-party outages, or experimental functionality.
+
+10. NO FINANCIAL OR INVESTMENT ADVICE
+
+The Software is a research and intelligence tool. It does not constitute financial,
+investment, legal, tax, trading, or other professional advice. Nothing produced by
+the Software guarantees an airdrop, token launch, eligibility, market performance,
+or financial return.
+
+11. LIMITATION OF LIABILITY
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE COPYRIGHT HOLDER SHALL NOT BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, CONSEQUENTIAL, OR OTHER LOSS
+OR DAMAGE ARISING FROM OR RELATED TO THE SOFTWARE, INCLUDING LOSS OF FUNDS, TOKENS,
+DATA, PROFITS, OPPORTUNITIES, BUSINESS, OR ACCESS TO THIRD-PARTY SERVICES.
+
+12. TERMINATION
+
+Any permission granted under this license automatically terminates if you violate
+its terms. Upon termination, you must cease all unauthorized use and remove any
+unauthorized copies under your control, subject to applicable law.
+
+13. NO IMPLIED LICENSE
+
+No license or right is granted by implication, estoppel, publication of source code,
+repository visibility, disclosure, demonstration, contribution discussion, or any
+other means except through an express written agreement from the copyright holder.
+
+14. RESERVATION OF RIGHTS
+
+All rights not expressly granted are reserved by the copyright holder.
+
+For production, commercial, hosted, integration, partnership, or other licensing,
+obtain written authorization from the copyright holder before using the Software.
