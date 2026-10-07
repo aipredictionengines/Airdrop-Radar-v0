@@ -1,0 +1,4 @@
+# Never commit real secrets.
+ADMIN_TOKEN=replace-with-a-long-random-secret
+COINGECKO_API_KEY=
+X_BEARER_TOKEN=

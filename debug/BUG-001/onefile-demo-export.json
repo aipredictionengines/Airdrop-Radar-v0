@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "product": "Airdrop Intelligence Radar",
+    "version": "0.1.4-onefile",
+    "exportedAt": "2026-10-06T18:54:21.504Z",
+    "mode": "github-pages-onefile",
+    "datasetCount": 5
+  },
+  "dataset": [
+    {
+      "id": "demo:alpha",
+      "source": "demo",
+      "kind": "pre-tge",
+      "name": "Atlas Test Protocol",
+      "symbol": null,
+      "chain": "Base",
+      "chains": [
+        "Base"
+      ],
+      "category": "Lending",
+      "address": null,
+      "description": "Test fixture: tokenless lending protocol with points-style activity.",
+      "tokenlessHeuristic": true,
+      "isDemo": true
+    },
+    {
+      "id": "demo:beta",
+      "source": "demo",
+      "kind": "pre-tge",
+      "name": "Northstar Test Network",
+      "symbol": null,
+      "chain": "Ethereum",
+      "chains": [
+        "Ethereum"
+      ],
+      "category": "Infrastructure",
+      "address": null,
+      "description": "Test fixture: infrastructure project used to validate local Radar Search.",
+      "tokenlessHeuristic": true,
+      "isDemo": true
+    },
+    {
+      "id": "demo:gamma",
+      "source": "demo",
+      "kind": "token",
+      "name": "Signal Test Token",
+      "symbol": "SIGT",
+      "chain": "Solana",
+      "chains": [
+        "Solana"
+      ],
+      "category": "DEX",
+      "address": "DEMO111111111111111111111111111111111111111",
+      "description": "Test fixture: post-TGE token candidate.",
+      "tokenlessHeuristic": false,
+      "isDemo": true
+    },
+    {
+      "id": "demo:delta",
+      "source": "demo",
+      "kind": "pre-tge",
+      "name": "Meridian Test Rollup",
+      "symbol": null,
+      "chain": "Arbitrum",
+      "chains": [
+        "Arbitrum"
+      ],
+      "category": "Rollup",
+      "address": null,
+      "description": "Test fixture for watchlist and qualification workflow.",
+      "tokenlessHeuristic": true,
+      "isDemo": true
+    },
+    {
+      "id": "demo:epsilon",
+      "source": "demo",
+      "kind": "token",
+      "name": "Orbit Test Market",
+      "symbol": "ORBT",
+      "chain": "Base",
+      "chains": [
+        "Base"
+      ],
+      "category": "Prediction Market",
+      "address": "0xDEMO000000000000000000000000000000000001",
+      "description": "Test fixture for address and symbol search.",
+      "tokenlessHeuristic": false,
+      "isDemo": true
+    }
+  ],
+  "sourceState": {
+    "demo": {
+      "source": "demo",
+      "status": "DEMO",
+      "count": 5,
+      "detail": "Embedded test fixtures",
+      "at": "2026-10-06T18:53:16.066Z"
+    },
+    "defillama": {
+      "source": "defillama",
+      "status": "IDLE",
+      "count": 0,
+      "detail": "Not requested yet",
+      "at": null
+    },
+    "dexscreener": {
+      "source": "dexscreener",
+      "status": "IDLE",
+      "count": 0,
+      "detail": "Not requested yet",
+      "at": null
+    },
+    "import": {
+      "source": "import",
+      "status": "IDLE",
+      "count": 0,
+      "detail": "No file imported",
+      "at": null
+    },
+    "x": {
+      "source": "x",
+      "status": "BACKEND_REQUIRED",
+      "count": 0,
+      "detail": "Secure backend required",
+      "at": null
+    },
+    "coingecko": {
+      "source": "coingecko",
+      "status": "BACKEND_REQUIRED",
+      "count": 0,
+      "detail": "API key stays off public Pages",
+      "at": null
+    }
+  },
+  "sourceCalls": [],
+  "events": [],
+  "journal": [],
+  "decisions": [],
+  "errors": []
+}

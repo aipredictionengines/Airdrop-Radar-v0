@@ -1,50 +1,94 @@
-# Airdrop Intelligence Radar v0.1.3 — Snapshot Test Build
+# Airdrop Radar v0.2 — Live Test Build
 
-> **Source-visible, proprietary software. Not open source.** See `LICENSE`.
+**Status:** test build / source-visible proprietary software. See `LICENSE`.
 
-This build fixes the GitHub Pages source-ingestion failure observed in v0.1.2.
+This package finishes the missing live-data foundation behind the existing GitHub Pages frontend.
 
-## What changed
-
-GitHub Pages no longer fetches DeFiLlama or DEX Screener directly from the browser.
+## Architecture
 
 ```text
-DeFiLlama / DEX Screener
-          ↓
-GitHub Action collector
-          ↓
-normalized data/*.json snapshots
-          ↓
-GitHub Pages Radar
-          ↓
-Search / Watchlist / Qualification / LAB
+GitHub Pages frontend
+        ↓
+Cloudflare Worker API
+        ↓
+Cloudflare D1
+        ↑
+DeFiLlama collector
+
+Worker also proxies:
+DEX Screener search / profiles
+CoinGecko contract cross-check (secret key)
+
+Worker stores:
+X recent-search monitored feed (secret bearer token)
+Source runs / PASS-FAIL / errors / market snapshots
 ```
 
-This makes the UI search same-origin data and preserves the last good snapshot if a later source refresh fails.
+## What is implemented
 
-## First test
+- `GET /health`
+- `POST /api/collect/defillama` — admin protected
+- `GET /api/projects`
+- `GET /api/search?q=aave`
+- `GET /api/dex/search?q=USDC`
+- `GET /api/dex/profiles`
+- `GET /api/coingecko/contract?platform=ethereum&address=...`
+- `POST /api/collect/x` — admin protected
+- `GET /api/x/feed`
+- `GET /api/debug/runs`
+- `GET /api/debug/errors`
+- `GET /api/debug/export`
+- D1 schema and migrations
+- Cron collector hooks
+- GitHub Pages frontend already pointed at the Worker URL supplied for testing
+- preserved BUG-001 regression evidence in `debug/BUG-001/`
 
-1. Upload the complete repository, including `.github/workflows/` and `scripts/`.
-2. Open GitHub → **Actions** → **Update Radar Data** → **Run workflow**.
-3. Wait for a green run and the automatic `data: refresh radar snapshot` commit.
-4. Open the GitHub Pages URL and hard refresh (`Ctrl+Shift+R`).
-5. The header should show a real `Last snapshot` timestamp and a non-zero candidate count.
-6. Search a protocol/token/chain in **Radar Search**.
+## Folders
 
-The workflow also runs automatically twice per hour.
+```text
+backend/
+  src/index.js
+  src/lib.js
+  worker.single.js
+  migrations/0001_init.sql
+  test/lib.test.js
+  wrangler.jsonc
+  package.json
+frontend/
+  index.html
+LICENSE
+DEPLOY_STEP_BY_STEP.md
+TEST_CHECKLIST.md
+LIVE_TEST.ps1
+```
 
-## Public data in v0.1.3
+## First gate
 
-- DeFiLlama protocol feed
-- DEX Screener latest token profiles
-- DEX Screener latest boosts
+Do not call v0.2 PASS until:
 
-X and CoinGecko remain marked as backend/secret-required and are planned for the v0.2 Insight/Evidence layer.
+```text
+Worker health             PASS
+D1                        PASS
+DeFiLlama received        >= 100
+D1 projects               >= 100
+Search "aave"             >= 1 result
+DEX search                >= 1 pair
+Source runs               recorded
+Debug export              contains real backend runs
+```
 
-## QA evidence
+CoinGecko and X become additional PASS gates after their API credentials are configured.
 
-The original empty/stuck v0.1.2 debug exports are preserved under `debug/BUG-001/` and are treated as regression fixtures.
+## Local code tests
 
-## Security
+From `backend/`:
 
-No wallet connection, private keys, signing, or auto-claim functionality is included.
+```bash
+npm test
+```
+
+The included pure-logic test suite currently covers normalization, bounds, change hashes, DEX fields and CoinGecko extraction.
+
+## Safety boundary
+
+No wallet connection, private-key handling, transaction signing or auto-claim is included. `tokenlessHeuristic` is only a heuristic and is never treated as confirmation of an airdrop.

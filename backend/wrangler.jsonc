@@ -1,0 +1,24 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "bitter-disk-3576weather-edge-worker",
+  "main": "worker.single.js",
+  "compatibility_date": "2026-10-07",
+  "vars": {
+    "ALLOWED_ORIGINS": "https://aipredictionengines.github.io,http://localhost:8787,http://127.0.0.1:5500",
+    "ALLOW_PUBLIC_COLLECTORS": "false",
+    "X_QUERY": ""
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "airdrop-radar",
+      "database_id": "REPLACE_WITH_D1_DATABASE_ID"
+    }
+  ],
+  "triggers": {
+    "crons": [
+      "15 */6 * * *",
+      "45 * * * *"
+    ]
+  }
+}
