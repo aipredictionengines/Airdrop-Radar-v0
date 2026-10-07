@@ -12,7 +12,7 @@
     {
       "binding": "DB",
       "database_name": "airdrop-radar",
-      "database_id": "REPLACE_WITH_D1_DATABASE_ID"
+      "database_id": "fb709e62-31ae-4a4f-8c7d-5dca74dbd158"
     }
   ],
   "triggers": {
